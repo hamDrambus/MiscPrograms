@@ -1,0 +1,18 @@
+<Settings>
+  <!--OPT means value is optional. If it is not specified, the default value/behaviour will be used-->
+  <General>
+    <input_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache/NBrS_spectra.dat</input_filename> <!-- Must be relative-->
+    <output_filename_template_X>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache/NBrS_spectrum_($X)Td.dat</output_filename_template_X> <!-- Must be relative-->
+    <output_filename_template_Y>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache/NBrS_spectrum_($Y)eV.dat</output_filename_template_Y> <!-- Must be relative-->
+    <output_X_title>Photon energy[eV] CDF</output_X_title> <!--OPT inseted in the output file header-->
+    <X_input_scale>47.6191</X_input_scale> <!--OPT geant4's 1 MV/mm to Townsends in LAr at 1 atm (N = 2.10e22 cm-3)-->
+    <Y_input_scale>1.0e6</Y_input_scale> <!--OPT geant4's MeV to eV-->
+    <Z_input_scale>1.0</Z_input_scale> <!--OPT CDF (cumulative distribution function = probability)-->
+    <Plots>
+      <X>5.0</X>
+      <X>1.0</X>
+      <X>0.3</X>
+      <X>0.1</X>
+    </Plots>
+  </General>
+</Settings>

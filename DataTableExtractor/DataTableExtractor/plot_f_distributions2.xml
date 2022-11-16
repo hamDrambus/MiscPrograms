@@ -1,0 +1,20 @@
+<Settings>
+  <!--OPT means value is optional. If it is not specified, the default value/behaviour will be used-->
+  <General>
+    <input_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_v2_elastic/electron_energy_distributions.dat</input_filename> <!-- Must be relative to working folder-->
+    <output_filename_template_X>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_v2_elastic/f_($X)Td.dat</output_filename_template_X> <!-- Must be relative-->
+    <output_filename_template_Y>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_v2_elastic/f_($Y)eV.dat</output_filename_template_Y> <!-- Must be relative-->
+    <output_X_title>Electron energy[eV] f'</output_X_title> <!--OPT inseted in the output file header-->
+    <X_input_scale>47.6191</X_input_scale> <!--OPT geant4's 1 MV/mm to Townsends in LAr at 1 atm (N = 2.10e22 cm-3)-->
+    <Y_input_scale>6.2415091e18</Y_input_scale> <!--OPT SI to eV-->
+    <Z_input_scale>6.4130642e-29</Z_input_scale> <!--OPT from SI to eV: ingegral [f'(E) sqrt(E) dE] = 1-->
+    <Plots>
+      <X>10.0</X>
+      <X>5.0</X>
+      <X>3.0</X>
+      <X>1.0</X>
+      <X>0.3</X>
+      <X>0.1</X>
+    </Plots>
+  </General>
+</Settings>

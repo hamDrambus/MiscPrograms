@@ -1,0 +1,8 @@
+<Settings>
+  <!--OPT means value is optional. If it is not specified, the default value/behaviour will be used-->
+  <General>
+    <input_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/Structure_factor_Yarnell73.txt</input_filename> <!-- Must be ralative-->
+    <output_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/S(eps)_Yarnell73.txt</output_filename> <!-- Must be ralative-->
+    <X_input_scale>1e10</X_input_scale> <!--Angestrem^-1 to SI-->
+  </General>
+</Settings>
