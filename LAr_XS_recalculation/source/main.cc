@@ -48,11 +48,14 @@ int main(int argc, char** argv)
   inXS.read(str);
   str.close();
 
+  IntegrationRange x_range = IntegrationInterval(0.0, 1.0, 1e-3);
+  x_range += IntegrationInterval(1.0, 10.0, 0.1);
+  x_range += IntegrationInterval(10.0, 50.0, 0.5);
   DataVector outXS(inXS.getOrder(), inXS.getNused());
   outXS.use_leftmost(true); outXS.use_rightmost(true);
-  for (std::size_t i = 0, i_end_ = inXS.size(); i!=i_end_; ++i) {
-    double energy = inXS[i].first;
-    outXS.push_back(energy, inXS[i].second
+  for (std::size_t i = 0, i_end_ = x_range.NumOfIndices(); i!=i_end_; ++i) {
+    double energy = x_range.Value(i);
+    outXS.push_back(energy, inXS(energy)
        * (gPars::general.input_is_effective_XS ? StructureFactor(energy) : 1 / StructureFactor(energy)));
   }
   outXS.write(gPars::general.this_path + gPars::general.output_XS_filename, "Energy[eV]\tXS[cm2]");
