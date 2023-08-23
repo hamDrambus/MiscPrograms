@@ -1,9 +1,9 @@
 <Settings>
   <!--OPT means value is optional. If it is not specified, the default value/behaviour will be used-->
   <General>
-    <input_XS_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/XS_energy_transfer_Var4.txt</input_XS_filename> <!-- Must be ralative-->
-    <input_S_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/S(eps)_Yarnell73.txt</input_S_filename> <!-- Must be ralative-->
-    <output_XS_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/XS_momentum_transfer_Var4.txt</output_XS_filename> <!-- Must be ralative-->
+    <input_XS_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LXe_XS/XS_energy_transfer_Borisova.txt</input_XS_filename> <!-- Must be ralative-->
+    <input_S_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LXe_XS/S(eps)_Borisova.txt</input_S_filename> <!-- Must be ralative-->
+    <output_XS_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LXe_XS/XS_momentum_transfer_Borisova.txt</output_XS_filename> <!-- Must be ralative-->
     <input_is_effective_XS>true</input_is_effective_XS>
   </General>
 </Settings>
