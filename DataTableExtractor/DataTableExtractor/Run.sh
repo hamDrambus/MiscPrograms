@@ -9,4 +9,4 @@ PROJECTNAME=$(basename "$SCRIPTPATH")
 BTYPE=RelWithDebInfo
 BIN=${SCRIPTPATH}-build/${BTYPE}/${PROJECTNAME}
 
-${BIN} plot_NBrS_spectra_Xe.xml | tee Log.txt 
+${BIN} plot_NBrS_XS_exact_Ar.xml | tee Log.txt 

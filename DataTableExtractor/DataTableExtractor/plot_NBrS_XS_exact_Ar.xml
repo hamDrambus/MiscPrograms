@@ -1,0 +1,18 @@
+<Settings>
+  <!--OPT means value is optional. If it is not specified, the default value/behaviour will be used-->
+  <General>
+    <input_filename>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/Theory_SalnikovMilstein/XS_NBrS_table_no_pol.dat</input_filename> <!-- Must be relative to working folder-->
+    <output_filename_template_X>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/Theory_SalnikovMilstein/dsdw_no_pol_e($X)eV.dat</output_filename_template_X> <!-- Must be relative-->
+    <output_filename_template_Y>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data/LAr_XS/Theory_SalnikovMilstein/dsdw_no_pol_w($Y)eV.dat</output_filename_template_Y> <!-- Must be relative-->
+    <output_X_title>Photon energy[eV] dsdw[barn/eV]</output_X_title> <!--OPT inseted in the output file header-->
+    <X_input_scale>1</X_input_scale> <!-- Mathematica resuls are in eV-->
+    <Y_input_scale>1</Y_input_scale> <!-- Mathematica resuls are in eV-->
+    <Z_input_scale>1.0e8</Z_input_scale> <!-- Mathematica resuls are in Angstroms^2/eV-->
+    <Plots>
+      <X>0.5</X>
+      <X>2.0</X>
+      <X>4.0</X>
+      <X>10.0</X>
+    </Plots>
+  </General>
+</Settings>
