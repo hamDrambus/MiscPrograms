@@ -1,0 +1,11 @@
+<Settings>
+  <!--OPT means value is optional. If it is not specified, the default value/behaviour will be used-->
+  <General>
+    <!-- Inputs and outputs must be relative to working folder-->
+    <input_f_distr>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_LAr_v4_transfer/electron_energy_distributions.dat</input_f_distr>
+    <input_v_drift>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_LAr_v4_transfer/drift_velocity.dat</input_v_drift>
+    <input_XS_energy_transfer>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_LAr_v4_transfer/XS_energy_transfer_spline.dat</input_XS_energy_transfer>
+    <input_XS_momentum_transfer>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_LAr_v4_transfer/XS_momentum_transfer_spline.dat</input_XS_momentum_transfer>
+    <output_folder>../../../Detector_geant4/NBrS_THGEM_LAr_v0/data_cache_LAr_v4_transfer/stationarity_conditions/</output_folder>
+  </General>
+</Settings>
