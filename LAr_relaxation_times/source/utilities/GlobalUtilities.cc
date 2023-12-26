@@ -47,25 +47,33 @@ std::string dbl_to_str (double val, int precision)
   return ss.str();
 }
 
-std::string strtoken(std::string &in, std::string break_symbs)
+std::string strtoken_fast(std::string &in, std::string break_symbs)
 {
+  // Absolute running time: 0.85 sec, cpu time: 1.05 sec
+  // vs old implementation (erasing and copying char by char):
+  // Absolute running time: 1.12 sec, cpu time: 1.51 sec
   std::string out;
-  while (!in.empty())
-  {
-    char a = in.front();
-    in.erase(in.begin());
+  auto erase_marker = in.begin();
+  auto copy_from = in.begin(), copy_to = in.end();
+  while (erase_marker!=in.end()) {
     bool break_ = false;
     for (auto h = break_symbs.begin(); h != break_symbs.end(); ++h)
-      if (a == *h) {
+      if (*erase_marker == *h) {
         break_ = true;
         break;
       }
-    if ((break_) && (out.empty()))
+    if ((break_) && copy_from == erase_marker) {
+      ++erase_marker;
+      ++copy_from;
       continue;
+    }
+    ++erase_marker;
     if (break_)
-      return out;
-    out.push_back(a);
+      break;
+    copy_to = erase_marker;
   }
+  out = std::string(copy_from, copy_to);
+  in.erase(in.begin(), erase_marker);
   return out;
 }
 
